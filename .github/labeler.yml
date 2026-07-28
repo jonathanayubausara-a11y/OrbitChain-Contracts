@@ -12,52 +12,60 @@
 
 # Rust Soroban contracts — the canonical on-chain API surface.
 api:
-  - "campaign/**"
-  - "common/**"
-  - "token-bridge/**"
-  - "crates/contracts/core/**"
-  - "crates/contracts/batch-donor/**"
+  - any-to-match:
+      - "campaign/**"
+      - "common/**"
+      - "token-bridge/**"
+      - "crates/contracts/core/**"
+      - "crates/contracts/batch-donor/**"
 
 # Native CLI tooling (`cargo run -p orbitchain-tools -- …`).
 cli:
-  - "crates/tools/**"
+  - any-to-match:
+      - "crates/tools/**"
 
 # Frontend / mobile-wallet surfaces (Playwright + wallet integration).
 frontend:
-  - "wallet_connect.html"
-  - "wallet_connect.js"
-  - "tests/e2e/**"
-  - "playwright.config.js"
+  - any-to-match:
+      - "wallet_connect.html"
+      - "wallet_connect.js"
+      - "tests/e2e/**"
+      - "playwright.config.js"
 
 # CI / build infrastructure.
 ci:
-  - ".github/workflows/**"
-  - ".github/*.md"
-  - ".github/ISSUE_TEMPLATE/**"
-  - ".cargo/**"
-  - "rust-toolchain.toml"
-  - "Cargo.toml"
-  - "Cargo.lock"
+  - any-to-match:
+      - ".github/workflows/**"
+      - ".github/*.md"
+      - ".github/ISSUE_TEMPLATE/**"
+      - ".cargo/**"
+      - "rust-toolchain.toml"
+      - "Cargo.toml"
+      - "Cargo.lock"
 
 # Documentation and reference material.
 documentation:
-  - "docs/**"
-  - "**/*.md"
+  - any-to-match:
+      - "docs/**"
+      - "**/*.md"
 
 # Persistent / temporary storage backend code paths.
 storage:
-  - "**/storage*.rs"
-  - "**/backend.rs"
+  - any-to-match:
+      - "**/storage*.rs"
+      - "**/backend.rs"
 
 # Tests / property-based / fuzz harnesses.
 testing:
-  - "**/tests/**"
-  - "**/*test*.rs"
-  - "**/proptest-strategies/**"
-  - "**/fuzz_targets/**"
-  - "fuzz/**"
+  - any-to-match:
+      - "**/tests/**"
+      - "**/*test*.rs"
+      - "**/proptest-strategies/**"
+      - "**/fuzz_targets/**"
+      - "fuzz/**"
 
 # Security process and security-sensitive code.
 security:
-  - "SECURITY.md"
-  - "**/security*.rs"
+  - any-to-match:
+      - "SECURITY.md"
+      - "**/security*.rs"
