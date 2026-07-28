@@ -12,7 +12,8 @@
 
 # Rust Soroban contracts — the canonical on-chain API surface.
 api:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "campaign/**"
       - "common/**"
       - "token-bridge/**"
@@ -21,12 +22,14 @@ api:
 
 # Native CLI tooling (`cargo run -p orbitchain-tools -- …`).
 cli:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "crates/tools/**"
 
 # Frontend / mobile-wallet surfaces (Playwright + wallet integration).
 frontend:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "wallet_connect.html"
       - "wallet_connect.js"
       - "tests/e2e/**"
@@ -34,7 +37,8 @@ frontend:
 
 # CI / build infrastructure.
 ci:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - ".github/workflows/**"
       - ".github/*.md"
       - ".github/ISSUE_TEMPLATE/**"
@@ -45,19 +49,22 @@ ci:
 
 # Documentation and reference material.
 documentation:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "docs/**"
       - "**/*.md"
 
 # Persistent / temporary storage backend code paths.
 storage:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "**/storage*.rs"
       - "**/backend.rs"
 
 # Tests / property-based / fuzz harnesses.
 testing:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "**/tests/**"
       - "**/*test*.rs"
       - "**/proptest-strategies/**"
@@ -66,6 +73,7 @@ testing:
 
 # Security process and security-sensitive code.
 security:
-  - any-to-match:
+  - changed-files:
+    - any-glob-to-any-file:
       - "SECURITY.md"
       - "**/security*.rs"
